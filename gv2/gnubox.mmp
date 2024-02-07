@@ -1,0 +1,2 @@
+#include "..\group\gnubox_common.mmp"
+MACRO __S60V2__

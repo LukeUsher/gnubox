@@ -1,0 +1,20 @@
+;
+; Installation file for Gnubox application
+;
+; Copyright: Mal Minhas
+;
+;Languages
+&EN
+;
+; UID is the app's UID
+;
+#{"Gnubox"},(0x097764f0),1,0,0
+; Series 60
+(0x101F6F88), 0, 0, 0, {"Series60ProductID"}
+;
+; Three files to install
+;
+"\symbian\7.0s\Series60_v20\epoc32\release\armi\urel\gnubox.app"         -"!:\system\apps\gnubox\gnubox.app"
+"\symbian\7.0s\Series60_v20\epoc32\data\z\system\apps\gnubox\gnubox.rsc"         -"!:\system\apps\gnubox\gnubox.rsc"
+;"\Epoc32\release\armi\urel\Gnubox_caption.rsc" -"!:\system\apps\Gnubox\Gnubox_caption.rsc"
+"\symbian\7.0s\Series60_v20\epoc32\data\z\system\apps\gnubox\gnubox.aif"         -"!:\system\apps\gnubox\gnubox.aif"

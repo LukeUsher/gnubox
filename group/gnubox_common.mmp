@@ -1,0 +1,67 @@
+//
+// gnubox.mmp
+// 28th August 2002
+//
+// Copyright: Mal Minhas
+//
+// Description:
+//   Project specification file for gnubox
+//
+
+TARGET         gnubox.app
+TARGETTYPE     app
+UID            0x100039ce 0x097764f0
+TARGETPATH     \system\apps\gnubox
+
+SOURCEPATH     ..\src
+SOURCE         gnuboxApp.cpp
+SOURCE         gnuboxAppUi.cpp
+SOURCE         gnuboxDocument.cpp
+SOURCE         gnuboxContainer.cpp
+SOURCE         gnuboxAOLoader.cpp
+
+RESOURCE       ..\data\gnubox.rss
+//RESOURCE ..\data\gnubox_caption.rss
+LANG           SC
+
+USERINCLUDE    . ..\include
+SYSTEMINCLUDE  . \epoc32\include
+
+LIBRARY        euser.lib apparc.lib cone.lib eikcore.lib
+LIBRARY        eikcoctl.lib avkon.lib
+// extra ones
+LIBRARY		   estor.lib
+LIBRARY        gdi.lib
+LIBRARY        flogger.lib
+LIBRARY        commdb.lib
+LIBRARY        efsrv.lib
+LIBRARY        btextnotifiers.lib
+LIBRARY        btregistry.lib
+LIBRARY        bluetooth.lib
+
+START WINS
+// wins_specific_information
+END
+
+START MARM
+// marm_specific_information
+END
+
+// Other possible keywords:
+/*
+START BITMAP target
+TARGETPATH   emulated_path_on_target_machine
+HEADER
+SOURCEPATH   source_path
+SOURCE       color_depth source_bitmap_list
+END
+*/
+// DEFFILE filename
+
+// The following is required in order to build the aif file for the
+// application.  Note that this needs a full "abld build wins udeb"
+// done in order to generate the aif.
+
+AIF gnubox.aif ..\aif gnuboxaif.rss c8 \
+cont_pane_icon.bmp cont_pane_icon_mask.bmp \
+list_icon.bmp list_icon_mask.bmp

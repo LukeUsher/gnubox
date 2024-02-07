@@ -1,0 +1,4 @@
+Module:        gnubox
+Description:   Internet Access through Infrared or Bluetooth APs
+Maintainer:    mal@malm.co.uk
+License:       GPL

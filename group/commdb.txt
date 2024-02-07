@@ -1,0 +1,616 @@
+
+TABLE Chargecard
+
+ROW
+Id = 1
+Name = Dummy BT Chargecard
+AccountNumber = 144,12345678
+Pin = 0000
+LocalRule = HG
+NatRule = HFG
+IntlRule = HEFG
+
+ROW
+Id = 2
+Name = Dummy Mercury Chargecard
+AccountNumber = 0500800800,,12345678
+Pin = ****
+LocalRule = HG
+NatRule = J,K,0FG
+IntlRule = HEFG
+
+
+TABLE DefaultGPRS
+
+ROW
+Id = 1
+Name = Dial-out GPRS Settings
+Usage = 1
+APN = Radiolinja inet
+PDPType = 1
+PDPAddress = 
+Precedence = 1
+Delay = 1
+Reliability = 1
+MeanThroughput = 1
+MinPrecedence = 1
+MinDelay = 1
+MinReliability = 1
+MinPeakThroughput = 1
+MinMeanThroughput = 1
+DataCompression = TRUE
+HeaderCompression = TRUE
+AnonymousAccess = TRUE
+
+
+TABLE DialOutISP
+
+ROW
+Id = 0
+Name = Defaul Dial Out ISP
+Description = 
+Type = NULL
+DefaultTelNum = 
+DialResolution = TRUE
+UseLoginScript = FALSE
+LoginScript = 
+PromptForLogin = TRUE
+LoginName = 
+LoginPass = 
+DisplayPCT = FALSE
+IfName = ppp
+IfParams = 
+IfNetworks = 
+IfPromptForAuth = TRUE
+IfAuthName = 
+IfAuthPass = 
+IfCallbackEnabled = FALSE
+IfCallbackInfo = 
+IfCallbackType = NULL
+CallbackTimeout = NULL
+IpAddrFromServer = TRUE
+IpAddr = 
+IpNetMask = 
+IpGateway = 
+IpDNSAddrFromServer = TRUE
+IpNameServer1 = 
+IpNameServer2 = 
+EnableIPHeaderComp = FALSE
+EnableLCPExtension = FALSE
+DisablePlainTextAuth = FALSE
+EnableSWComp = FALSE
+BearerCE = NULL
+BearerName = NULL
+BearerSpeed = NULL
+InitString = 
+BearerType = NULL
+ChannelCoding = NULL
+AIUR = NULL
+RequestedTimeSlots = NULL
+MaximumTimeSlots = NULL
+
+
+TABLE IAP
+
+ROW
+Id = 12
+Name = RL MMS
+IAPService = 6
+IAPServiceType = OutgoingGPRS
+Chargecard = NULL
+
+ROW
+Id = 13
+Name = Radiolinja WAP GPRS
+IAPService = 7
+IAPServiceType = OutgoingGPRS
+Chargecard = NULL
+
+ROW
+Id = 14
+Name = Radiolinja inet
+IAPService = 8
+IAPServiceType = OutgoingGPRS
+Chargecard = NULL
+
+ROW
+Id = 16
+Name = Local
+IAPService = 10
+IAPServiceType = OutgoingGPRS
+Chargecard = NULL
+
+
+TABLE IncomingGPRS
+
+ROW
+Id = 1
+Name = Incoming GPRS Settings
+APN = 
+PDPType = 0
+PDPAddress = 0.0.0.0
+ReqPrecedence = 1
+ReqDelay = 1
+ReqReliability = 1
+ReqPeakThroughput = 1
+ReqMeanThroughput = 1
+MinPrecedence = 1
+MinDelay = 1
+MinReliability = 1
+MinPeakThroughput = 1
+MinMeanThroughput = 1
+DataCompression = FALSE
+HeaderCompression = FALSE
+AnonymousAccess = FALSE
+IfName = PPP
+IfParams = 
+IfNetworks = ip
+IfPromptForAuth = FALSE
+IfAuthName = RasUser
+IfAuthPass = pass
+AuthRetries = 1
+IpNetMask = 
+IpGateway = 
+IpAddrFromServer = TRUE
+IpAddr = 
+IpDNSAddrFromServer = TRUE
+IpNameServer1 = 0.0.0.0
+IpNameServer2 = 0.0.0.0
+EnableLCPExtension = FALSE
+DisablePlainTextAuth = FALSE
+
+
+TABLE OutgoingGPRS
+
+ROW
+Id = 6
+Name = RL MMS
+APN = mms
+PDPType = 0
+PDPAddress = 
+ReqPrecedence = 0
+ReqDelay = 0
+ReqReliability = 0
+ReqPeakThroughput = 0
+ReqMeanThroughput = 0
+MinPrecedence = 0
+MinDelay = 0
+MinReliability = 0
+MinPeakThroughput = 0
+MinMeanThroughput = 0
+DataCompression = FALSE
+HeaderCompression = FALSE
+AnonymousAccess = FALSE
+IfName = pppgprs
+IfParams = 
+IfNetworks = ip
+IfPromptForAuth = FALSE
+IfAuthName = 
+IfAuthPass = 
+AuthRetries = 0
+IpNetMask = 
+IpGateway = 213.161.41.57
+IpAddrFromServer = TRUE
+IpAddr = 0.0.0.0
+IpDNSAddrFromServer = TRUE
+IpNameServer1 = 0.0.0.0
+IpNameServer2 = 0.0.0.0
+EnableLCPExtension = FALSE
+DisablePlainTextAuth = FALSE
+
+ROW
+Id = 7
+Name = Radiolinja WAP GPRS
+APN = wap
+PDPType = 0
+PDPAddress = 
+ReqPrecedence = 0
+ReqDelay = 0
+ReqReliability = 0
+ReqPeakThroughput = 0
+ReqMeanThroughput = 0
+MinPrecedence = 0
+MinDelay = 0
+MinReliability = 0
+MinPeakThroughput = 0
+MinMeanThroughput = 0
+DataCompression = FALSE
+HeaderCompression = FALSE
+AnonymousAccess = FALSE
+IfName = pppgprs
+IfParams = 
+IfNetworks = ip
+IfPromptForAuth = FALSE
+IfAuthName = rl
+IfAuthPass = wap
+AuthRetries = 0
+IpNetMask = 
+IpGateway = 213.161.040.040
+IpAddrFromServer = TRUE
+IpAddr = 0.0.0.0
+IpDNSAddrFromServer = TRUE
+IpNameServer1 = 0.0.0.0
+IpNameServer2 = 0.0.0.0
+EnableLCPExtension = FALSE
+DisablePlainTextAuth = FALSE
+
+ROW
+Id = 8
+Name = Radiolinja inet
+APN = internet
+PDPType = 0
+PDPAddress = 
+ReqPrecedence = 0
+ReqDelay = 0
+ReqReliability = 0
+ReqPeakThroughput = 0
+ReqMeanThroughput = 0
+MinPrecedence = 0
+MinDelay = 0
+MinReliability = 0
+MinPeakThroughput = 0
+MinMeanThroughput = 0
+DataCompression = FALSE
+HeaderCompression = FALSE
+AnonymousAccess = FALSE
+IfName = pppgprs
+IfParams = 
+IfNetworks = ip
+IfPromptForAuth = FALSE
+IfAuthName = rlnet
+IfAuthPass = internet
+AuthRetries = 0
+IpNetMask = 
+IpGateway = 
+IpAddrFromServer = TRUE
+IpAddr = 0.0.0.0
+IpDNSAddrFromServer = FALSE
+IpNameServer1 = 213.161.33.200
+IpNameServer2 = 212.226.226.1
+EnableLCPExtension = FALSE
+DisablePlainTextAuth = FALSE
+
+ROW
+Id = 10
+Name = Local
+APN = 
+PDPType = 0
+PDPAddress = 
+ReqPrecedence = 0
+ReqDelay = 0
+ReqReliability = 0
+ReqPeakThroughput = 0
+ReqMeanThroughput = 0
+MinPrecedence = 0
+MinDelay = 0
+MinReliability = 0
+MinPeakThroughput = 0
+MinMeanThroughput = 0
+DataCompression = FALSE
+HeaderCompression = FALSE
+AnonymousAccess = FALSE
+IfName = pppgprs
+IfParams = 
+IfNetworks = ip
+IfPromptForAuth = FALSE
+IfAuthName = 
+IfAuthPass = 
+AuthRetries = 0
+IpNetMask = 
+IpGateway = 
+IpAddrFromServer = TRUE
+IpAddr = 0.0.0.0
+IpDNSAddrFromServer = TRUE
+IpNameServer1 = 0.0.0.0
+IpNameServer2 = 0.0.0.0
+EnableLCPExtension = FALSE
+DisablePlainTextAuth = FALSE
+
+
+TABLE Location
+
+ROW
+Id = 0
+Name = Default Location
+IntlPrefixCode = +
+NatPrefixCode = 0
+NatCode = 44
+AreaCode = 
+DialOutCode = 
+DisableCallWaitingCode = 
+Mobile = TRUE
+UsePulseDial = FALSE
+WaitForDialTone = FALSE
+PauseAfterDialout = 0
+
+ROW
+Id = 2
+Name = Mobile
+IntlPrefixCode = +
+NatPrefixCode = 0
+NatCode = 44
+AreaCode = 
+DialOutCode = 
+DisableCallWaitingCode = 
+Mobile = TRUE
+UsePulseDial = FALSE
+WaitForDialTone = FALSE
+PauseAfterDialout = 0
+
+
+TABLE Modem
+
+ROW
+Id = 0
+Name = Default Modem
+PortName = COMM::0
+TSYName = GSMBSC
+CSYName = ECUART
+DataBits = 3
+StopBits = 0
+Parity = 0
+Rate = 18
+Handshaking = 0
+SpecialRate = 0
+XoffChar = 0
+XonChar = 0
+FaxClassPref = 0
+SpeakerPref = 3
+SpeakerVolPref = 0
+ModemInitString = AT
+DataInitString = AT
+FaxInitString = AT
+IspInitString = 
+DialPauseLength = S8=
+CarrierTimeout = 
+AutoAnswerRingCount = 
+SpeakerAlwaysOff = M0
+SpeakerAlwaysOn = M2
+SpeakerOnAfterUntilCarrier = M3
+SpeakerOnUntilCarrier = M1
+SpeakerVolControlHigh = L2
+SpeakerVolContorlLow = L0
+SpeakerVolControlMedium = L1
+DialToneWaitModifier = W
+CallProgress1 = X1
+CallProgress2 = X2
+CallProgress3 = X3
+CallProgress4 = X4
+EchoOff = E0
+VerboseText = V1
+QuietOff = Q0
+QuietOn = Q1
+DialCommandStateModifier = ;
+OnLine = O
+ResetConfiguration = Z
+ReturnToFactoryDefs = &F
+DCDOnDuringLink = &C1
+DTRHangUp = &D2
+DSRAlwaysOn = &S0
+RTSCTSHandshake = &K3
+XonXoffHandshake = &K4
+EscapeCharacter = +
+EscapeGuardPeriod = S12
+FaxClassInterrogate = 
+FaxClass = 
+NoAnswer = NO ANSWER
+NoDialTone = NO DIAL TONE
+Busy = BUSY
+Carrier = CARRIER
+Connect = CONNECT
+CompressionClass5 = COMPRESSION:CLASS 5
+CompressionNone = COMPRESSION:NONE
+CompressionV42bis = COMPRESSION:V.42 bis
+ProtocolALT = PROTOCOL:ALT
+ProtocolALTCELLULAR = PROTOCOL:ALT-CELLULAR
+ProtocolLAPD = PROTOCOL:LAPD
+ProtocolNone = PROTOCOL:NONE
+MessageCentreNumber = 
+MessageDeliveryReport = NULL
+MessageValidityPeriod = NULL
+
+ROW
+Id = 2
+Name = Nokia
+PortName = DATAPORT::0
+TSYName = PHONETSY
+CSYName = DATAPORT
+DataBits = 3
+StopBits = 0
+Parity = 0
+Rate = 18
+Handshaking = 212
+SpecialRate = 0
+XoffChar = 19
+XonChar = 17
+FaxClassPref = 0
+SpeakerPref = 0
+SpeakerVolPref = 0
+ModemInitString = ATZ
+DataInitString = AT
+FaxInitString = AT
+IspInitString = 
+DialPauseLength = S8=
+CarrierTimeout = 
+AutoAnswerRingCount = 
+SpeakerAlwaysOff = M0
+SpeakerAlwaysOn = M2
+SpeakerOnAfterUntilCarrier = M3
+SpeakerOnUntilCarrier = M1
+SpeakerVolControlHigh = L2
+SpeakerVolContorlLow = L0
+SpeakerVolControlMedium = L1
+DialToneWaitModifier = W
+CallProgress1 = X1
+CallProgress2 = X2
+CallProgress3 = X3
+CallProgress4 = X4
+EchoOff = E0
+VerboseText = V1
+QuietOff = Q0
+QuietOn = Q1
+DialCommandStateModifier = ;
+OnLine = O
+ResetConfiguration = Z
+ReturnToFactoryDefs = &F
+DCDOnDuringLink = &C1
+DTRHangUp = &D2
+DSRAlwaysOn = &S0
+RTSCTSHandshake = &K3
+XonXoffHandshake = &K4
+EscapeCharacter = +
+EscapeGuardPeriod = S12
+FaxClassInterrogate = 
+FaxClass = 
+NoAnswer = NO ANSWER
+NoDialTone = NO DIAL TONE
+Busy = BUSY
+Carrier = CARRIER
+Connect = CONNECT
+CompressionClass5 = COMPRESSION:CLASS 5
+CompressionNone = COMPRESSION:NONE
+CompressionV42bis = COMPRESSION:V.42 bis
+ProtocolALT = PROTOCOL:ALT
+ProtocolALTCELLULAR = PROTOCOL:ALT-CELLULAR
+ProtocolLAPD = PROTOCOL:LAPD
+ProtocolNone = PROTOCOL:NONE
+MessageCentreNumber = + 3 5 8 5 0 8 7 7 1 0 1 0 
+MessageDeliveryReport = FALSE
+MessageValidityPeriod = 1440
+
+
+TABLE Proxies
+
+ROW
+Id = 1
+Name = Error reading value -1
+ISP = 8
+ProxyServiceType = DialOutISP
+UseProxyServer = TRUE
+ProxyServerName = www.dummyproxy.com
+ProtocolName = http
+PortNumber = 80
+Exceptions = www.dummyproxy.com/exception
+
+
+TABLE WAPAccessPoint
+
+ROW
+Id = 0
+Name = Defaul Dial In ISP
+CurrentBearer = WAPIPBearer
+StartPage = 
+
+ROW
+Id = 4
+Name = RL MMS
+CurrentBearer = WAPIPBearer
+StartPage = http://mms.radiolinja.fi
+
+ROW
+Id = 5
+Name = Radiolinja WAP GPRS
+CurrentBearer = WAPIPBearer
+StartPage = http://wap.radiolinja.fi/
+
+ROW
+Id = 6
+Name = Radiolinja inet
+CurrentBearer = WAPIPBearer
+StartPage = 
+
+ROW
+Id = 8
+Name = Local
+CurrentBearer = WAPIPBearer
+StartPage = 
+
+
+TABLE WAPIPBearer
+
+ROW
+Id = 0
+Name = Error reading value -1
+AccessPointId = 0
+Chargecard = 0
+GatewayAddress = 
+IAP = 0
+ISP = 0
+ISPType = 0
+Location = 0
+Security = FALSE
+WSPOption = 0
+
+ROW
+Id = 3
+Name = Error reading value -1
+AccessPointId = 4
+Chargecard = 0
+GatewayAddress = 213.161.41.57
+IAP = 12
+ISP = 6
+ISPType = 2
+Location = 0
+Security = FALSE
+WSPOption = 1
+
+ROW
+Id = 4
+Name = Error reading value -1
+AccessPointId = 5
+Chargecard = 0
+GatewayAddress = 213.161.40.40
+IAP = 13
+ISP = 7
+ISPType = 2
+Location = 0
+Security = FALSE
+WSPOption = 1
+
+ROW
+Id = 5
+Name = Error reading value -1
+AccessPointId = 6
+Chargecard = 0
+GatewayAddress = 0.0.0.0
+IAP = 14
+ISP = 8
+ISPType = 2
+Location = 0
+Security = FALSE
+WSPOption = 1
+
+ROW
+Id = 7
+Name = Error reading value -1
+AccessPointId = 8
+Chargecard = 0
+GatewayAddress = 169.254.1.68
+IAP = 16
+ISP = 10
+ISPType = 2
+Location = 0
+Security = FALSE
+WSPOption = 1
+
+
+TABLE WAPSMSBearer
+
+ROW
+Id = 0
+Name = Error reading value -1
+AccessPointId = 0
+GatewayAddress = 
+ServiceCentreAddresss = 
+Security = FALSE
+WSPOption = 0
+
+ROW
+Id = 2
+Name = Error reading value -1
+AccessPointId = 2
+GatewayAddress = +4412345678901
+ServiceCentreAddresss = +442071234567
+Security = FALSE
+WSPOption = 1
+

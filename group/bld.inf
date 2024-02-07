@@ -1,0 +1,14 @@
+//
+// bld.inf
+// 28/08/02 by Mal Minhas
+//
+// bld.inf file for gnubox
+// Copyright: Mal Minhas
+
+PRJ_PLATFORMS
+ARMI
+WINS
+
+PRJ_MMPFILES
+
+gnubox.mmp

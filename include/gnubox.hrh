@@ -1,0 +1,25 @@
+//
+// GNUBOX.HRH
+// 28th August 2002
+//
+// Copyright: Mal Minhas
+//
+// Description:
+//   Main resource file for GNUBOX app
+//
+
+#ifndef GNUBOX_HRH
+#define GNUBOX_HRH
+
+enum TGnuboxCommandIds
+    {
+    EGnuboxCmdAppDirect = 1,
+	EGnuboxCmdAppDialup,
+	EGnuboxCmdAppCSD_GPRS,
+	EGnuboxCmdAppInfraredDirect,
+	EGnuboxCmdAppBluetoothDirect,
+	EGnuboxCmdAppInfraredDialup,
+	EGnuboxCmdAppBluetoothDialup
+    };
+
+#endif      // GNUBOX_HRH

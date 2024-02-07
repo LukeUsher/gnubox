@@ -1,0 +1,18 @@
+//
+// gnuboxaif.rss
+//
+// 28th August, 2002. 
+// Copyright: Mal Minhas
+//
+// RSS for creating the aif file for gnubox
+
+#include <aiftool.rh>
+
+RESOURCE AIF_DATA
+    {
+    app_uid=0x097764F0;
+    num_icons=2;
+    embeddability=KAppNotEmbeddable;
+    newfile=KAppDoesNotSupportNewFile;
+    }
+

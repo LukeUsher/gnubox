@@ -1,0 +1,90 @@
+//
+// gnubox.rss
+//
+// 28th August 2002
+// Copyright Mal Minhas
+//
+// Description:
+//	 Gnubox app resource file
+//
+
+//  RESOURCE IDENTIFIER
+NAME    TBOX // 4 letter ID
+
+//  INCLUDES
+
+#include <eikon.rh>
+#include "gnubox.hrh"
+#include <avkon.rsg>
+#include <avkon.rh>
+#include <avkon.mbg>
+
+//  CONSTANTS  
+
+//  MACROS
+
+//  RESOURCE DEFINITIONS 
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE TBUF { buf="gnubox"; }
+
+RESOURCE EIK_APP_INFO
+    {
+    hotkeys=r_gnubox_hotkeys;
+    menubar=r_gnubox_menubar;
+    cba=R_AVKON_SOFTKEYS_OPTIONS_BACK;     
+    }
+
+RESOURCE HOTKEYS r_gnubox_hotkeys
+    {
+    control=
+        {
+        HOTKEY { command=EAknCmdExit; key='e'; }
+        };
+    }
+
+RESOURCE MENU_BAR r_gnubox_menubar
+    {
+    titles=
+        {
+        MENU_TITLE { menu_pane=r_gnubox_menu; txt="Options"; }
+        };
+    }
+
+RESOURCE MENU_PANE r_gnubox_menu
+    {
+    items=
+        {
+        MENU_ITEM 
+            {
+			command=EGnuboxCmdAppDirect;txt="2box Direct";
+            cascade=r_gnubox_direct_submenu;
+            },
+        MENU_ITEM 
+            {
+			command=EGnuboxCmdAppDialup;txt="2box Dialup";
+            cascade=r_gnubox_dialup_submenu;
+            },
+		MENU_ITEM { command=EGnuboxCmdAppCSD_GPRS; txt="1box Phone"; },
+		MENU_ITEM { command=EAknCmdExit; txt="Exit"; }
+        };
+    }
+
+RESOURCE MENU_PANE r_gnubox_direct_submenu
+	{
+    items=
+        {
+        MENU_ITEM {command=EGnuboxCmdAppInfraredDirect; txt="Infrared"; },
+		MENU_ITEM {command=EGnuboxCmdAppBluetoothDirect; txt="Bluetooth"; }
+        };
+    }
+
+RESOURCE MENU_PANE r_gnubox_dialup_submenu
+	{
+    items=
+        {
+        MENU_ITEM {command=EGnuboxCmdAppInfraredDialup; txt="Infrared"; },
+		MENU_ITEM {command=EGnuboxCmdAppBluetoothDialup; txt="Bluetooth"; }
+        };
+    }
